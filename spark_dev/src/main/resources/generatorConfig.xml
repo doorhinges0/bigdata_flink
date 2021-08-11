@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- <properties url="E:/rfc/workspace/testmybatis/src/main/resources/jdbc.properties"/> -->
+    <classPathEntry
+
+    location="C:/Users/ACS/.m2/repository/mysql/mysql-connector-java/5.1.35/mysql-connector-java-5.1.35.jar"/>
+    <!--location="E:/Java/JAVAMaven/repository/mysql/mysql-connector-java/5.1.35/mysql-connector-java-5.1.35.jar"/>-->
+    <context id="my" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="false"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://47.107.112.168:3306/acadsoclearn?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;generateSimpleParameterMetadata=true"
+                        userId="root"
+                        password="root"/>
+
+        <javaModelGenerator targetPackage="com.acadsoc.learning.my.domain"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.acadsoc.learning.my.domain"
+                         targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator targetPackage="com.acadsoc.learning.my.dao"
+                             targetProject="src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+
+        <!-- <table tableName="t_wechat_info" domainObjectName="WechatInfoEntity">
+            <generatedKey column="id" sqlStatement="mysql" identity="true"/> </table> -->
+        <!-- <table tableName="t_wechat_task" domainObjectName="WechatTaskEntity"> -->
+        <!-- <generatedKey column="id" sqlStatement="mysql" identity="true"/> -->
+        <!-- </table> -->
+        <!-- <table tableName="t_wechat_category" domainObjectName="WechatCatetoryEntity"> -->
+        <!-- <generatedKey column="id" sqlStatement="mysql" identity="true"/> -->
+        <!-- </table> -->
+        <!-- <table tableName="t_wechat_article_count" domainObjectName="WechatArticleCountEntity"> -->
+        <!-- <generatedKey column="id" sqlStatement="mysql" identity="true"/> -->
+        <!-- </table> -->
+        <!--<table tableName="t_class_stucomment" domainObjectName="ClassStucomment">-->
+        <!--&lt;!&ndash;<generatedKey column="fansid" sqlStatement="mysql" identity="true" />-->
+        <!--<columnOverride column="fans1" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+        <!--<columnOverride column="fans2" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+        <!--<columnOverride column="fans3" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+        <!--<columnOverride column="fans4" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+        <!--<columnOverride column="fans5" javaType="java.lang.String" jdbcType="VARCHAR" />&ndash;&gt;-->
+        <!--<generatedKey column="cid" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--t_uc_userreport-->
+
+        <!--<table tableName="t_uc_userreport" domainObjectName="userreport">-->
+        <!--<generatedKey column="ReportID" sqlStatement="mysql" identity="true" />-->
+        <!--<columnOverride column="SuggestJson" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+        <!--<columnOverride column="Comprehensive" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+        <!--<columnOverride column="Characteristic" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+        <!--<columnOverride column="Meal" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+        <!--<columnOverride column="TeacherEvaluate" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+
+
+        <!--</table>-->
+
+        <!--<table tableName="t_ass_userassessrecord" domainObjectName="AssUserAssessRecord">-->
+        <!--</table>-->
+        <!--<table tableName="t_uc_userbeforelesson" domainObjectName="UserBeforeLesson">-->
+        <!--<generatedKey column="aid" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_uc_userbeforelessontype" domainObjectName="UserBeforeLessonType">-->
+        <!--<generatedKey column="qid" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_uc_usercategory" domainObjectName="UserCategory">-->
+        <!--<generatedKey column="ucid" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_uc_userbeforelessontype" domainObjectName="UserBeforeLessonType">-->
+        <!--<generatedKey column="qid" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_uc_userchina" domainObjectName="UserChina">-->
+        <!--<generatedKey column="id" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_uc_usercomplain" domainObjectName="UserComplain">-->
+        <!--<generatedKey column="ucid" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_uc_usercomplainex" domainObjectName="UserComplainx">-->
+        <!--<generatedKey column="id" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_uc_userneed" domainObjectName="UserNeed">-->
+        <!--<generatedKey column="unid" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+
+        <!--<table tableName="t_uc_userotherinfo" domainObjectName="UserOtherInfo">-->
+        <!--<generatedKey column="uid" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_uc_userqr" domainObjectName="UserQr">-->
+        <!--<generatedKey column="id" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_uc_usersubject" domainObjectName="UserSubject">-->
+        <!--<generatedKey column="usid" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_uc_usersubjectoperation" domainObjectName="UserSubjectOperation">-->
+        <!--<generatedKey column="usaid" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_uc_phoneverify" domainObjectName="PhoneVerify">-->
+        <!--<generatedKey column="id" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_uc_phoneverifylogin" domainObjectName="PhoneVerifyLogin">-->
+        <!--<generatedKey column="id" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_uc_phonevisited" domainObjectName="PhoneVisited">-->
+        <!--<generatedKey column="phone" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_uc_userrepeatregister" domainObjectName="UserRepeatRegister">-->
+        <!--<generatedKey column="UID" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_uc_userloginiprecord" domainObjectName="UserLoginIPRecord">-->
+        <!--<generatedKey column="Id" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_uc_userloginiprecordaoi" domainObjectName="UserLoginIPRecordAOI">-->
+        <!--<generatedKey column="Id" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_uc_whitelistuser" domainObjectName="WhiteListUser">-->
+        <!--<generatedKey column="ID" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_uc_usersplittest" domainObjectName="UserSplittest">-->
+        <!--<generatedKey column="ID" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_ass_examinationpapers" domainObjectName="AssExaminationPapers">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_ass_reading" domainObjectName="AssReading">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_ass_listeningquestion" domainObjectName="AssListeningQuestion">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true" />-->
+            <!--<columnOverride column="title" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+            <!--<columnOverride column="choice" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_cld_userInfo" domainObjectName="CldUserInfo">-->
+        <!--<generatedKey column="UID" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_uc_blacklist" domainObjectName="blacklist">-->
+        <!--<generatedKey column="ID" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_log_error" domainObjectName="Logerror">-->
+        <!--</table>-->
+
+        <!--<table tableName="t_uc_distributionlog" domainObjectName="DistributionLog">-->
+        <!--<generatedKey column="Id" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_cld_userInfo" domainObjectName="CldUserInfo">-->
+        <!--<generatedKey column="UID" sqlStatement="mysql" identity="false" />-->
+        <!--</table>-->
+
+
+        <!--<table tableName="t_uc_userrepeatregister" domainObjectName="UserRepeatRegister">-->
+        <!--&lt;!&ndash;<generatedKey column="UID" sqlStatement="mysql" identity="false" />&ndash;&gt;-->
+        <!--</table>-->
+
+        <!--<table tableName="t_report_studentweekclass" domainObjectName="ReportStudentWeekClass">-->
+        <!--<generatedKey column="id" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_uc_userotherinfo" domainObjectName="UserOtherInfo">-->
+
+        <!--</table>-->
+
+
+        <!--<table tableName="t_class_studplant" domainObjectName="ClassStudPlant">-->
+        <!--<generatedKey column="Id" sqlStatement="mysql" identity="true" />-->
+        <!--</table>-->
+
+        <!--<table tableName="t_uc_learnadvice" domainObjectName="LearnAdvice">-->
+        <!--</table>-->
+
+        <!--<table tableName="t_class_studplant" domainObjectName="ClassStudPlant">-->
+            <!--<generatedKey column="Id" sqlStatement="mysql" identity="true"/>-->
+            <!--<columnOverride column="CurrentEnglishSituation" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+            <!--<columnOverride column="LearningGoals" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+            <!--<columnOverride column="LearningScheme" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+            <!--<columnOverride column="PhaseReport" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+            <!--<columnOverride column="NextLearningPlan" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+        <!--</table>-->
+
+
+        <!--<table tableName="t_ass_listening" domainObjectName="AssListening">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true" />-->
+            <!--<columnOverride column="title" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+        <!--</table>-->
+
+
+        <!--<table tableName="t_ass_listening" domainObjectName="AssListening">-->
+            <!--<generatedKey column="id" sqlStatement="mysql" identity="true" />-->
+            <!--<columnOverride column="title" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+        <!--</table>-->
+
+        <table tableName="t_ass_reading" domainObjectName="AssReading">
+            <generatedKey column="id" sqlStatement="mysql" identity="true" />
+            <columnOverride column="title" javaType="java.lang.String" jdbcType="VARCHAR" />
+        </table>
+    </context>
+</generatorConfiguration>
+
+
