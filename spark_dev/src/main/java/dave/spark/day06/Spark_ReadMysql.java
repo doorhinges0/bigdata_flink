@@ -48,7 +48,7 @@ public class Spark_ReadMysql {
                 new JdbcRDD.ConnectionFactory() {
                     @Override
                     public Connection getConnection() throws Exception {
-                        return DriverManager.getConnection("jdbc:mysql://47.107.112.168:3306/qywx", "root", "AcadsoC!@#$%^236");
+                        return DriverManager.getConnection("jdbc:mysql://:/", "", "AcadsoC!@#$%^236");
                     }
                 },
                 "select * from user_behavior where id >= ? and id < ?",
@@ -94,10 +94,10 @@ public class Spark_ReadMysql {
 
         //准备配置文件
         final Properties props = new Properties();
-        props.setProperty("user", "root");
-        props.setProperty("password", "AcadsoC!@#$%^236");
+        props.setProperty("user", "");
+        props.setProperty("password", "");
         props.setProperty("useSSL", "false");
-        String url = "jdbc:mysql://47.107.112.168:3306/qywx";
+        String url = "jdbc:mysql://:3306/";
         String targetTable = "id_test";
 
         df.write().mode(SaveMode.Append).jdbc(url, targetTable, props);
@@ -111,7 +111,7 @@ public class Spark_ReadMysql {
 //                String sid = parts[0]  + Math.random();;
 //                String sname = parts[1];
 //
-//                Connection conn = DriverManager.getConnection("jdbc:mysql://47.107.112.168:3306/qywx", "root", "AcadsoC!@#$%^236");
+//                Connection conn = DriverManager.getConnection("jdbc:mysql://:3306/qywx", "", "");
 //                String sql = " insert into id_test(ids, values1) values (?,?) ";
 //                PreparedStatement psm = conn.prepareStatement(sql);
 //                psm.setString(1, sid);
@@ -132,7 +132,7 @@ public class Spark_ReadMysql {
                 if(stringIterator!=null) {
                     List<String> myList = Lists.newArrayList(stringIterator);
 
-                    Connection con = DriverManager.getConnection("jdbc:mysql://47.107.112.168:3306/qywx", "root", "AcadsoC!@#$%^236");
+                    Connection con = DriverManager.getConnection("jdbc:mysql://:3306/qywx", "", "");
                     String sql = " insert into id_test(ids, values1) values (?,?) ";
                     boolean success = false;
                     PreparedStatement ps = null;
