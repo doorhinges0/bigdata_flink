@@ -81,31 +81,31 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.acadsoc.admin.domain.DdPopTestKey" >
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.rfc.admin.domain.DdPopTestKey" >
     select 
     <include refid="Base_Column_List" />
     from dd_pop_test
     where State = #{state,jdbcType=VARCHAR}
       and City = #{city,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.acadsoc.admin.domain.DdPopTestKey" >
+  <delete id="deleteByPrimaryKey" parameterType="com.rfc.admin.domain.DdPopTestKey" >
     delete from dd_pop_test
     where State = #{state,jdbcType=VARCHAR}
       and City = #{city,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.acadsoc.admin.domain.DdPopTestExample" >
+  <delete id="deleteByExample" parameterType="com.rfc.admin.domain.DdPopTestExample" >
     delete from dd_pop_test
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.acadsoc.admin.domain.DdPopTest" >
+  <insert id="insert" parameterType="com.rfc.admin.domain.DdPopTest" >
     insert into dd_pop_test (State, City, Population
       )
     values (#{state,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{population,jdbcType=BIGINT}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.acadsoc.admin.domain.DdPopTest" >
+  <insert id="insertSelective" parameterType="com.rfc.admin.domain.DdPopTest" >
     insert into dd_pop_test
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="state != null" >
@@ -130,7 +130,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.acadsoc.admin.domain.DdPopTestExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.rfc.admin.domain.DdPopTestExample" resultType="java.lang.Integer" >
     select count(*) from dd_pop_test
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -162,7 +162,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.acadsoc.admin.domain.DdPopTest" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.rfc.admin.domain.DdPopTest" >
     update dd_pop_test
     <set >
       <if test="population != null" >
@@ -172,7 +172,7 @@
     where State = #{state,jdbcType=VARCHAR}
       and City = #{city,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.acadsoc.admin.domain.DdPopTest" >
+  <update id="updateByPrimaryKey" parameterType="com.rfc.admin.domain.DdPopTest" >
     update dd_pop_test
     set Population = #{population,jdbcType=BIGINT}
     where State = #{state,jdbcType=VARCHAR}
