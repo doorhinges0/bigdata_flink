@@ -16,22 +16,22 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://47.107.112.168:3306/acadsoclearn?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;generateSimpleParameterMetadata=true"
+                        connectionURL="jdbc:mysql://:3306/rfclearn?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;generateSimpleParameterMetadata=true"
                         userId="root"
                         password="root"/>
 
-        <javaModelGenerator targetPackage="com.acadsoc.learning.my.domain"
+        <javaModelGenerator targetPackage="com.rfc.learning.my.domain"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.acadsoc.learning.my.domain"
+        <sqlMapGenerator targetPackage="com.rfc.learning.my.domain"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.acadsoc.learning.my.dao"
+        <javaClientGenerator targetPackage="com.rfc.learning.my.dao"
                              targetProject="src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
