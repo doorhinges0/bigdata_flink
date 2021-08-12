@@ -48,7 +48,7 @@ public class Spark_ReadMysql {
                 new JdbcRDD.ConnectionFactory() {
                     @Override
                     public Connection getConnection() throws Exception {
-                        return DriverManager.getConnection("jdbc:mysql://:/", "", "AcadsoC!@#$%^236");
+                        return DriverManager.getConnection("jdbc:mysql://:/", "", "");
                     }
                 },
                 "select * from user_behavior where id >= ? and id < ?",
