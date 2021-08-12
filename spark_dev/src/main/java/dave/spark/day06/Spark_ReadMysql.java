@@ -32,9 +32,9 @@ public class Spark_ReadMysql {
 
         Map<String, String> map = new HashMap<>();
         map.put("driver", "com.mysql.jdbc.Driver");
-        map.put("url", "jdbc:mysql://47.107.112.168:3306/qywx");
-        map.put("user", "root");
-        map.put("password", "AcadsoC!@#$%^236");
+        map.put("url", "jdbc:mysql://:/");
+        map.put("user", "");
+        map.put("password", "");
         map.put("dbtable", "user_behavior");
         map.put("useSSL", "false"); //useSSL=true
 
