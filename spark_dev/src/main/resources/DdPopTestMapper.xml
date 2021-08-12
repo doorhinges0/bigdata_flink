@@ -67,7 +67,7 @@
   <sql id="Base_Column_List" >
     State, City, Population
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.acadsoc.admin.domain.DdPopTestExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.rfc.admin.domain.DdPopTestExample" >
     select
     <if test="distinct" >
       distinct
